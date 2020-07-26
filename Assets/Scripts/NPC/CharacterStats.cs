@@ -31,6 +31,8 @@ public class CharacterStats : MonoBehaviour
 
         CharacterTasks.CurrentTask[] selectedHobbies;
         selectedHobbies = new CharacterTasks.CurrentTask[characterHobbies.Length];
+
+        // Start with random hobbies
         for (int i = 0; i < characterHobbies.Length; i++)
         {
             int pickRandom = Random.Range(1, hobbies.hobbies.Length);
@@ -63,15 +65,7 @@ public class CharacterStats : MonoBehaviour
 
     void CheckTask()
     {
-        //if (nav.destination != transform.position)
-        //{
-        //    currentTask = CharacterTasks.CurrentTask.MovingToLocation;
-        //}
-        //else
-        //{
-        //    currentTask = CharacterTasks.CurrentTask.Nothing;
-        //}
-
+        // Changes enum to formatted string
         string checkTask = currentTask.ToString();
         for (int i = 0; i < checkTask.Length; i++)
         {
@@ -85,6 +79,7 @@ public class CharacterStats : MonoBehaviour
         displayCurrentTask = checkTask;
     }
 
+    // Decreases hunger bar over time
     void HungerUpdate()
     {
         currentHunger -= 0.2f * Time.deltaTime * time.currentTimeSpeed;

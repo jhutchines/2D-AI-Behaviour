@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class BuildingParts : MonoBehaviour
 {
+    // Contains all types required for buildings and building parts
+
+
     public enum BuildingType
     {
         Housing,

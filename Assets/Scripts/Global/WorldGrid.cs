@@ -21,6 +21,7 @@ public class WorldGrid : MonoBehaviour
 
     public void RefreshGrid()
     {
+        // Finds all objects and saves their x and z locations for characters to reference
         var buildingObjects = FindObjectsOfType<BuildingPartsData>();
         for (int i = 0; i < buildingObjects.Length; i++)
         {

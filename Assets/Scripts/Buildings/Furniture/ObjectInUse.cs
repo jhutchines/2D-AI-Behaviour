@@ -11,6 +11,7 @@ public class ObjectInUse : MonoBehaviour
         partsData = GetComponent<BuildingPartsData>();
     }
 
+    // Sets the object to "In Use" if any character is on there
     private void OnTriggerStay(Collider other)
     {
         if (other.GetComponent<CharacterStats>() != null)
@@ -19,6 +20,7 @@ public class ObjectInUse : MonoBehaviour
         }
     }
 
+    // Sets the object to no longer "In Use" if the character leaves
     private void OnTriggerExit(Collider other)
     {
         if (other.GetComponent<CharacterStats>() != null)

@@ -24,6 +24,10 @@ public class BuildingPartsData : MonoBehaviour
         
     }
 
+
+
+
+    // Toggles opening and closing doors when a character occupies the same space
     private void OnTriggerStay(Collider other)
     {
         if (isDoor)

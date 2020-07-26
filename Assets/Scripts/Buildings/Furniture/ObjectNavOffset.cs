@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class ObjectNavOffset : MonoBehaviour
 {
+    // Sets the offset (for objects such as counters) for a character to go to when using
+
     public Vector2 customerNavOffset;
     public Vector2 ownerNavOffset;
 

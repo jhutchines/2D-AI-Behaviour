@@ -21,6 +21,7 @@ public class CharacterDetails : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        // Finds the character that has been clicked on and opens panel
         int layerMask = 1 << 8;
         RaycastHit hit;
         if (Input.GetMouseButtonDown(0) && Physics.Raycast(Camera.main.ScreenPointToRay(Input.mousePosition), out hit, 30, layerMask))
@@ -30,11 +31,13 @@ public class CharacterDetails : MonoBehaviour
                 selectedCharacter = hit.transform.GetComponent<CharacterStats>();
             }
         }
+        // Closes panel on right mouse click
         if (Input.GetMouseButtonDown(1)) selectedCharacter = null;
 
         UpdateDetails();
     }
 
+    // Updates the details on the panel for the selected character
     void UpdateDetails()
     {
         if (selectedCharacter == null) transform.GetChild(0).gameObject.SetActive(false);

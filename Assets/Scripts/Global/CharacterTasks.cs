@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class CharacterTasks : MonoBehaviour
 {
+    // Contains the types of tasks and jobs for all characters
+
     public enum CurrentTask
     {
         Nothing,

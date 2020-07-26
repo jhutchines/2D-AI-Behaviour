@@ -13,6 +13,7 @@ public class CounterInUse : MonoBehaviour
         GetComponent<BoxCollider>().center = new Vector3(offset.x, 0, offset.y);
     }
 
+    // Sets the counter to "In Use" by the shopkeeper
     private void OnTriggerStay(Collider other)
     {
         if (other.GetComponent<CharacterStats>() != null)
@@ -24,6 +25,7 @@ public class CounterInUse : MonoBehaviour
         }
     }
 
+    // Counter is no longer in use if the shopkeeper leaves
     private void OnTriggerExit(Collider other)
     {
         if (other.GetComponent<CharacterStats>() != null)
